@@ -1,18 +1,20 @@
 {
-  "name": "exemplo-aula-backend-jp-2025",
+  "name": "exemplos-aula-backend-jp-2025",
   "version": "1.0.0",
-  "description": "\"projeto de exemplo jp\"",
+  "description": "Projeto de exemplo JP",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node index.js",
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch index.js",
+    "test": "cross-env TEST=true node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
-  "author": "Micaella",
+  "author": "Micaella Victoria",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "10.1.0",
+    "jest": "30.2.0"
   }
 }
